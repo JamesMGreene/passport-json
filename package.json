@@ -1,0 +1,63 @@
+{
+  "name": "passport-json",
+  "version": "1.0.0",
+  "description": "A Passport.js strategy for username/password authentication via JSON from the request body",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamesMGreene/passport-json.git"
+  },
+  "keywords": [
+    "passport",
+    "strategy",
+    "passport-strategy",
+    "passportstrategy",
+    "passportplugin",
+    "authentication",
+    "auth",
+    "identity",
+    "json",
+    "middleware"
+  ],
+  "author": {
+    "name": "James M. Greene",
+    "email": "james.m.greene@gmail.com",
+    "url": "http://greene.io/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JamesMGreene/passport-json/issues"
+  },
+  "homepage": "https://github.com/JamesMGreene/passport-json#readme",
+  "scripts": {
+    "test": "grunt travis --verbose"
+  },
+  "config": {
+    "blanket": {
+      "pattern": "",
+      "data-cover-never": [
+        "node_modules",
+        "test"
+      ],
+      "data-cover-reporter-options": {
+        "relativepath": true
+      }
+    },
+    "travis-cov": {
+      "threshold": 100
+    }
+  },
+  "dependencies": {
+    "passport-strategy": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "chai-passport-strategy": "^0.2.0",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.3",
+    "grunt-env": "^0.4.4",
+    "grunt-mocha-cov": "^0.4.0",
+    "grunt-open": "^0.2.3",
+    "mocha": "^2.3.4",
+    "travis-cov": "^0.2.5"
+  }
+}
