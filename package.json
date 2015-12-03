@@ -1,6 +1,6 @@
 {
   "name": "passport-json",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A Passport.js strategy for username/password authentication via JSON from the request body",
   "repository": {
     "type": "git",

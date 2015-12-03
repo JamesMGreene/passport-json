@@ -95,7 +95,10 @@ Strategy.prototype.authenticate = function(req, options) {
     password = lookup(req.body, self._passwordProp);
   }
 
-  if (!username || !password) {
+  if (
+    typeof username !== 'string' || !username ||
+    typeof password !== 'string'  // allow passwords of empty string (`''`)
+  ) {
     return self.fail({
       message: options.badRequestMessage || 'Missing credentials'
     }, 400);
