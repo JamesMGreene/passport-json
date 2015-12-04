@@ -59,6 +59,7 @@ function Strategy(options, verify) {
   this.name = 'json';
   this._verify = verify;
   this._passReqToCallback = options.passReqToCallback;
+  this._allowEmptyPasswords = !!options.allowEmptyPasswords;
 }
 
 /**
@@ -97,7 +98,7 @@ Strategy.prototype.authenticate = function(req, options) {
 
   if (
     typeof username !== 'string' || !username ||
-    typeof password !== 'string'  // allow passwords of empty string (`''`)
+    typeof password !== 'string' || (!password && !self._allowEmptyPasswords)
   ) {
     return self.fail({
       message: options.badRequestMessage || 'Missing credentials'

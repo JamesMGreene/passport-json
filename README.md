@@ -66,6 +66,7 @@ The available options include:
  - `usernameProp` - Optional, defaults to `'username'`
  - `passwordProp` - Optional, defaults to `'password'`
  - `passReqToCallback` - Optional, defaults to `false`
+ - `allowEmptyPasswords` - Optional, defaults to `false`
 
 
 ##### Using Those Options
@@ -124,6 +125,22 @@ passport.use(new JsonStrategy(
   },
   function(req, username, password, done) {
     // request object is now first argument
+    // ...
+  }
+));
+```
+
+
+###### `allowEmptyPasswords`
+
+By setting the `allowEmptyPasswords` option to `true`, passwords of empty string (`''`) will be allowed to pass the validation checks. For example:
+
+```js
+passport.use(new JsonStrategy(
+  {
+    allowEmptyPasswords: false
+  },
+  function(username, password, done) {
     // ...
   }
 ));
