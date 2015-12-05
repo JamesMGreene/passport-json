@@ -26,6 +26,7 @@ var lookup = require('./utils').lookup;
  *   - `usernameProp`  property name/path where the username is found, defaults to `'username'`
  *   - `passwordProp`  property name/path where the password is found, defaults to `'password'`
  *   - `passReqToCallback`  when `true`, `req` is the first argument to the verify callback (default: `false`)
+ *   - `allowEmptyPasswords`  when `true`, it will allow the password to be an empty string (default: `false`)
  *
  * Examples:
  *
