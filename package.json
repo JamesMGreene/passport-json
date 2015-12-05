@@ -36,7 +36,8 @@
       "pattern": "",
       "data-cover-never": [
         "node_modules",
-        "test"
+        "test",
+        "coverage"
       ],
       "data-cover-reporter-options": {
         "relativepath": true
